@@ -6,4 +6,394 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
- 
+
+html {
+    width: 100vw;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+}
+
+.navbar-top {
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 50px;
+    gap: 50px;
+}
+
+.navbar-top .location .contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FA8305;
+}
+
+nav header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#E47500, #DF7C14);
+    color: white;
+    padding: 10px 50px;
+}
+
+.logo {
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu a {
+    color: white;
+}
+
+button {
+    width: fit-content;
+    cursor: pointer;
+    padding: 8px 15px;
+    border: none;   
+    text-align: center;
+}
+
+.contact-btn {
+    color: #DF7C14;
+    background: white;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+main {
+    width: 80vw;
+    margin: auto;
+}
+
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-bg-image {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    /* bottom: -100px; */
+    z-index: -50;
+}
+
+.hero-section .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-section .content h3 {
+    color: #DF7C14;
+}
+
+.hero-section .content h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+p {
+    color: #6d6d6d;
+}
+
+.details-btn {
+    background: linear-gradient(#FA8305, #FB9E3C);
+    color: white;
+    border-radius: 80px;
+}
+
+.hero-image img {
+    width: 40vw;
+}
+
+.services-section,
+.newsletter {
+    text-align: center;
+    padding: 50px;
+}
+
+.services-section h2 {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.service-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-item:nth-of-type(5){
+    grid-column-start: 2;
+}
+
+.service-item h4 {
+    margin: 8px auto;
+}
+
+.arrow-icon {
+    cursor: pointer;
+}
+
+.arrow-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.insights-section {
+    background: #F5F5F5;
+    margin: auto -10vw;
+    padding: 10vw;
+}
+
+.insights-section .content {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    place-items: end;
+}
+
+.insights-section .content .navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.insights-section .navigation img {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.insights-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+
+.insights-grid .card {
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px gray;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.insights-grid .category-btn1{
+    border-radius: 10px;
+    background: rgba(67, 218, 7, 0.2);
+    color: #0CBE64;
+}
+
+.insights-grid .category-btn2{
+    border-radius: 10px;
+    background: rgba(240, 47, 47, 0.2);
+    color: #ee4e31;
+}
+
+.insights-grid .category-btn3{
+    border-radius: 10px;
+    background: rgba(220, 27, 238, 0.2);
+    color: #6201b1;
+}
+
+.insights-grid .card .read-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FA8305;
+    background: #faf9f9;
+    border-radius: 15px;
+}
+
+.recent-projects {
+    margin: 30px;
+    text-align: center;
+}
+
+.recent-projects p {
+    margin: 20px auto;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-gallery img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.team-highlight {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.team-highlight .image img {
+    width: 90%;
+}
+
+.team-highlight .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-highlight .content button {
+    color: white;
+    background: #E47500;
+    border-radius: 5px;
+}
+
+.newsletter p {
+    margin: 20px auto;
+}
+
+.newsletter .container {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1B1B1B;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    gap: 50px;
+}
+
+.newsletter .container .content {
+    width: 50%;
+}
+
+.newsletter .container .content p {
+    color: #ecebeb;
+}
+
+.newsletter .form {
+    width: 40%;
+    position: relative;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.form button {
+    position: absolute;
+    right: 0;
+    background: #DF7C14;
+    color: white;
+    border-radius: 15px;
+    height: 90%;
+    top: 5%;
+    right: 2px;
+}
+
+footer {
+    background-color: #1B1B1B;
+    color: #fff;
+    padding: 40px;
+}
+
+footer .top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+footer .logo {
+    color: #FA8305;
+}
+
+footer .about p,
+footer .contact p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+footer .links h4,
+footer .contact h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+footer .links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .links ul li {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.1s;
+}
+
+footer .social {
+    display: flex;
+    align-items: center;
+}
+
+footer .social img {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+footer .social img:hover {
+    transform: scale(1.1); 
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    color: #ccc;
+}
