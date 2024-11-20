@@ -9,6 +9,12 @@
 
 html {
     width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    
+    min-width: 420px;
 }
 
 nav {
@@ -48,6 +54,10 @@ nav header {
     background: linear-gradient(#E47500, #DF7C14);
     color: white;
     padding: 10px 50px;
+}
+
+nav header .menubar {
+    display: none;
 }
 
 .logo {
@@ -95,18 +105,19 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
 }
 
 .hero-bg-image {
     width: 100%;
     position: absolute;
     left: 0px;
-    /* bottom: -100px; */
+    bottom: -40px;
     z-index: -50;
 }
 
 .hero-section .content {
+    width: 60vw;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -117,7 +128,7 @@ main {
 }
 
 .hero-section .content h1 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -133,6 +144,15 @@ p {
 
 .hero-image img {
     width: 40vw;
+    animation-name: heroImageAnimation;
+    animation-duration: 3s;
+    animation-delay: 0s;
+}
+
+@keyframes heroImageAnimation {
+    0% {
+        transform: translateY(70px)
+    }
 }
 
 .services-section,
@@ -171,12 +191,6 @@ p {
     transition: transform 0.3s ease-in-out;
 }
 
-.insights-section {
-    background: #F5F5F5;
-    margin: auto -10vw;
-    padding: 10vw;
-}
-
 .insights-section .content {
     margin: 20px auto;
     display: grid;
@@ -195,7 +209,7 @@ p {
 }
 
 .insights-grid {
-    padding: 30px;
+    /* padding: 30px; */
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 30px;
@@ -208,7 +222,7 @@ p {
     box-shadow: 2px 2px 2px gray;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .insights-grid .category-btn1{
@@ -396,4 +410,103 @@ footer .copyright {
     border-top: 1px solid #333;
     padding-top: 10px;
     color: #ccc;
+}
+
+@media (max-width: 768px) {
+
+    nav .menu {
+        display: none;
+    }
+    nav header .menubar {
+        display: flex;
+    }
+
+    nav header .menubar img {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-section .content {
+        width: 100%;
+    }
+
+    .details-btn {  
+        margin: auto;
+    }
+
+    .hero-image img {
+        width: 70%;
+        margin: auto;
+    }
+
+    .hero-bg-image {
+        display: none;
+    }
+
+    .services-section,
+    .newsletter {
+        padding: 10px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .service-item:nth-of-type(5) {
+        grid-column-start:unset;
+    }
+
+    .insights-section .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .insights-section .insights-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .team-highlight {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .team-highlight .image img {
+        width: 100%;
+    }
+
+    .team-highlight .content {
+        align-items: center;
+    }
+
+    .newsletter .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .newsletter .container .content {
+        width: 100%;
+    }
+
+    .newsletter .form {
+        width: 100%;
+    }
 }
